@@ -1,0 +1,78 @@
+E:\胡钰彬\WenLab\ColorAlignment\vignette-removal\vignette-removal\images\senore\Img0001.jpg
+100 150
+
+1 0 74.5 
+0 1 49.5 
+0 0 1 
+
+0.999702 -0.0213131 0.0118652 
+0.0213116 0.999773 0.000252942 
+-0.0118679 -3.41511e-008 0.999929 
+
+149.932
+
+E:\胡钰彬\WenLab\ColorAlignment\vignette-removal\vignette-removal\images\senore\Img0002.jpg
+100 150
+
+1 0 74.5 
+0 1 49.5 
+0 0 1 
+
+0.999864 0.0160869 0.00354834 
+-0.0138469 0.937399 -0.347983 
+-0.00892416 0.347887 0.937494 
+
+147.791
+
+E:\胡钰彬\WenLab\ColorAlignment\vignette-removal\vignette-removal\images\senore\Img0003.jpg
+100 150
+
+1 0 74.5 
+0 1 49.5 
+0 0 1 
+
+0.999764 0.0209862 0.00562557 
+-0.012379 0.762972 -0.646313 
+-0.0178558 0.64609 0.763052 
+
+146.11
+
+E:\胡钰彬\WenLab\ColorAlignment\vignette-removal\vignette-removal\images\senore\Img0004.jpg
+100 150
+
+1 0 74.5 
+0 1 49.5 
+0 0 1 
+
+0.999666 0.0238494 0.01 
+-0.00329518 0.500998 -0.865442 
+-0.0256503 0.86512 0.500909 
+
+145.323
+
+E:\胡钰彬\WenLab\ColorAlignment\vignette-removal\vignette-removal\images\senore\Img0005.jpg
+100 150
+
+1 0 74.5 
+0 1 49.5 
+0 0 1 
+
+0.999435 0.0264012 0.020824 
+0.0159211 0.173927 -0.98463 
+-0.0296172 0.984405 0.173408 
+
+145.368
+
+E:\胡钰彬\WenLab\ColorAlignment\vignette-removal\vignette-removal\images\senore\Img0007.jpg
+100 150
+
+1 0 74.5 
+0 1 49.5 
+0 0 1 
+
+0 0 0 
+0 0 0 
+0 0 0 
+
+0
+
