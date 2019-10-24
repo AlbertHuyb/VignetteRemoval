@@ -82,6 +82,7 @@ class EMoR:
         return isMonotonic(self.rc)
 
     def eval(self,x):
+        # linear interpolation
         i = np.minimum(searchsortedDRG(self.x,np.array(x)),len(self.x)-2)
         return np.clip(
             lerp(self.x[i],self.x[i+1],x,

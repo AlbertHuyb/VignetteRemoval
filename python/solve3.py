@@ -130,7 +130,11 @@ def makeVignData(panodict,panocam,p):
 class VignModel:
     error = 'VignModel.error'
     
+<<<<<<< HEAD
     def __init__(self,curve=None,data=None,OneImageFlag=True):
+=======
+    def __init__(self,curve=None,data=None):
+>>>>>>> a5bc15a6f08b93c1262b410b78e5f13b5ad6028d
         self.curve = curve
         self.dmax = None
 
@@ -140,23 +144,35 @@ class VignModel:
             self.r4 = self.r2*self.r2
             self.r6 = self.r4*self.r2
 
+<<<<<<< HEAD
             if OneImageFlag:
                 self.initCounts(OneImageFlag)
             else:
                 self.initCounts()
+=======
+            self.initCounts()
+>>>>>>> a5bc15a6f08b93c1262b410b78e5f13b5ad6028d
 
             self.lamda = len(data)*10*10
 
             self.radiance = np.zeros((data.npixels,3),'d')
             
+<<<<<<< HEAD
     def initCounts(self,OneImageFlag=False):
+=======
+    def initCounts(self):
+>>>>>>> a5bc15a6f08b93c1262b410b78e5f13b5ad6028d
         data = self.data
         self.count = np.zeros(data.npixels)
         for i in range(len(data.pindex)):
             pindex = data.pindex[i]
             self.count[pindex] += 1
         # if minimum.reduce(self.count)<2:
+<<<<<<< HEAD
         if (reduce(min,self.count)<2) and (OneImageFlag==False):
+=======
+        if reduce(min,self.count)<2:
+>>>>>>> a5bc15a6f08b93c1262b410b78e5f13b5ad6028d
             raise(error, "some pixel only appears in 0 or 1 images")
 
     def getVignette(self,k):
@@ -186,6 +202,10 @@ class VignModel:
         
         self.exposureat = np.take(exposures,self.data.iindex)
         estrad = self.curve.pixelsToLinear(self.data.pixels)
+<<<<<<< HEAD
+=======
+        # recover from vignette and exposure
+>>>>>>> a5bc15a6f08b93c1262b410b78e5f13b5ad6028d
         estrad /= (v*self.exposureat)[:,np.newaxis]
 
         data = self.data
@@ -231,17 +251,17 @@ class VignModel:
         if len(exposures) != self.data.nimages:
             raise(error, "wrong # exposures (%d != %d)" % (len(exposures),self.data.nimages))
         self.vign = self.getVignette(vk)
-        self.curve.setCoeffs(rk)
-        # self.curve.setCoeffs(rk,1)
+        # self.curve.setCoeffs(rk)
+        self.curve.setCoeffs(rk,1)
         if hasattr(self.curve,'negLogLikelihood'):
             score = self.lamda * self.curve.negLogLikelihood(rk)
         else:
             score = 0
         
-        radianceat = np.take(self.radiance,self.data.pindex)
+        radianceat = np.take(self.radiance,self.data.pindex,0)
         self.exposureat = np.take(exposures,self.data.iindex)
-        recon = (self.vign*self.exposureat) * radianceat
-        recon = recon[:,np.newaxis]
+        recon = (self.vign*self.exposureat)[:,np.newaxis] * radianceat
+        # recon = recon[:,np.newaxis]
         if self.curve:
             reconPixels = self.curve.linearToPixels(recon)
         else:
