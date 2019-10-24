@@ -212,7 +212,7 @@ class VignModel:
         print("NONLINEAR RADIANCE ESTIMATION (SLOW)")
         from optimize import fmin
         for i in range(len(self.radiance)):
-            if not i%5:
+            if not i%500:
                 print(i,"out of",len(self.radiance))
             for j in range(3):
                 val = fmin(self.evalRad,(self.radiance[i,j],),(i,j),printmessg=0)
